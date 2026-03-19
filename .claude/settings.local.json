@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:akhshyganesh.github.io)",
+      "WebFetch(domain:abhishekganvir.vercel.app)",
+      "WebFetch(domain:github.com)",
+      "Bash(npm create:*)",
+      "Bash(npx --yes create-vite@latest temp_init --template react-ts)",
+      "Bash(cp -r temp_init/* temp_init/.* .)",
+      "Bash(rm -rf temp_init)",
+      "Bash(npm install:*)",
+      "Bash(cd:*)",
+      "Bash(npm run:*)",
+      "Bash(npx vite:*)",
+      "Bash(ls dist/assets/*.css)",
+      "Bash(ls -la C:/Users/dkim2/OneDrive/Desktop/Repos/evan_portfolio/public/evan-photo*)",
+      "Bash(ls -la C:/Users/dkim2/OneDrive/Desktop/Repos/evan_portfolio/evan-photo*)",
+      "Bash(ls:*)"
+    ]
+  }
+}
