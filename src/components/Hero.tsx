@@ -82,7 +82,7 @@ export default function Hero() {
             <div className="flex flex-wrap justify-center lg:justify-start gap-5 mb-8">
               <a
                 href={`${import.meta.env.BASE_URL}Evan_Kim-Resume.pdf`}
-                download
+                download="Evan_Kim-Resume.pdf"
                 className="group relative flex items-center gap-2 px-8 py-3.5 rounded-xl bg-gradient-to-r from-primary to-emerald-400 text-white text-sm font-semibold transition-all duration-300 hover:shadow-[0_0_25px_rgba(16,185,129,0.4),_0_0_50px_rgba(16,185,129,0.15)] hover:scale-[1.02]"
               >
                 <span className="absolute inset-0 rounded-xl bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
