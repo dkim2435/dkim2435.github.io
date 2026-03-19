@@ -184,9 +184,9 @@ export default function Portfolio() {
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="absolute top-0 right-0 inline-flex items-center gap-1.5 px-3 py-1 text-xs rounded-md bg-primary/10 text-primary border border-primary/20 hover:bg-primary/20 transition-colors"
+                      className="absolute -top-2 -right-2 inline-flex items-center gap-1 px-2 py-0.5 text-[10px] rounded-md bg-primary/10 text-primary border border-primary/20 hover:bg-primary/20 transition-colors"
                     >
-                      Live Demo <FiExternalLink size={12} />
+                      Live Demo <FiExternalLink size={10} />
                     </a>
                     <h3 className="text-xl font-bold text-text-primary mb-1">{project.title}</h3>
                     <p className="text-sm text-primary">{project.subtitle}</p>
