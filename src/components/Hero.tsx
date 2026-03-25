@@ -3,7 +3,7 @@ import { TypeAnimation } from 'react-type-animation'
 import { FiExternalLink, FiMail, FiDownload } from 'react-icons/fi'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 
-const techTags = ['Agentic AI', 'RAG', 'LLM Integration', 'React', 'TypeScript', 'Node.js']
+const techTags = ['Agentic AI', 'Multi-Agent Systems', 'RAG', 'MCP', 'LLM Integration', 'Full-Stack']
 
 export default function Hero() {
   return (
@@ -38,6 +38,8 @@ export default function Hero() {
                 sequence={[
                   'Agentic AI & RAG Systems',
                   2000,
+                  'Multi-Agent Orchestration',
+                  2000,
                   'Multimodal LLM Integration',
                   2000,
                   'Full Stack AI Products',
@@ -52,7 +54,7 @@ export default function Hero() {
 
             {/* Description */}
             <p className="text-text-secondary max-w-lg text-base md:text-lg mb-8 mx-auto lg:mx-0">
-              Two production AI products shipped from zero to launch.
+              Three production AI products shipped from zero to launch.
               Over six years of enterprise delivery at GM and Infosys/AT&T.
             </p>
 

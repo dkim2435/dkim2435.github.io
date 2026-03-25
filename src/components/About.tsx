@@ -3,7 +3,7 @@ import { FiCode, FiCpu, FiBriefcase } from 'react-icons/fi'
 
 const stats = [
   { icon: <FiBriefcase size={24} />, value: '6+', label: 'YEARS EXPERIENCE', desc: 'Enterprise delivery' },
-  { icon: <FiCode size={24} />, value: '2', label: 'AI PRODUCTS', desc: 'Live in production' },
+  { icon: <FiCode size={24} />, value: '3', label: 'AI PRODUCTS', desc: 'Live in production' },
   { icon: <FiCpu size={24} />, value: '2.7K+', label: 'USERS SERVED', desc: 'Across enterprise & AI products' },
 ]
 
@@ -63,10 +63,11 @@ export default function About() {
           className="max-w-3xl mx-auto text-center"
         >
           <p className="text-text-secondary leading-relaxed">
-            Enterprise delivery at GM and Infosys/AT&T taught me how to ship at scale.
-            When the AI wave hit, I didn't just study it. I built two production products
-            with agentic AI, RAG, and multimodal LLM integration.
-            Both are live and actively maintained.
+            After six years shipping enterprise systems at GM and Infosys/AT&T,
+            I moved into applied AI by building three production products from scratch.
+            I work across the full stack, from prompt design and multi-agent orchestration
+            to serverless infra and CI/CD, and I own every layer without hand-offs.
+            All three are live, deployed, and actively maintained.
           </p>
         </motion.div>
       </div>

@@ -6,6 +6,21 @@ type Tab = 'projects' | 'experience' | 'skills'
 
 const projects = [
   {
+    title: 'StudyLock',
+    subtitle: 'Real-Time Collaborative Study Room',
+    description:
+      'Pixel-art virtual library where users study together in real-time. AI multi-agent system adapts room atmosphere based on live weather and time of day. 14 themed floors with ambient sounds and Pomodoro timer.',
+    tech: ['CrewAI', 'AutoGen', 'LangGraph', 'LangChain', 'MCP', 'Claude API', 'Canvas 2D', 'FastAPI', 'Next.js', 'Supabase Realtime'],
+    link: 'https://studylock.dev',
+    highlights: [
+      'Multi-agent AI system (CrewAI + AutoGen + LangGraph)',
+      'Custom Canvas 2D engine with 60fps pixel-art rendering',
+      'Real-time presence via WebSocket across 14 themed rooms',
+      'MCP integration for weather data and Notion auto-docs',
+      '23 Playwright E2E tests + AI-driven browser monitoring',
+    ],
+  },
+  {
     title: 'Glowmi',
     subtitle: 'AI Skin Analysis Platform',
     description:
@@ -28,11 +43,11 @@ const projects = [
     tech: ['React', 'TypeScript', 'Claude API', 'Gemini API', 'OpenAI API', 'Supabase', 'Vercel'],
     link: 'https://ducktype.xyz',
     highlights: [
-      'AI-driven Adventure Mode with boss battles',
+      'AI-driven Adventure Mode (Claude + Gemini) with boss battles',
       '4-language support (EN/KO/ZH/JP) via Claude API',
-      'AI image generation (OpenAI DALL-E) for all visual assets',
+      'AI image generation (Gemini) for all visual assets',
+      'SEO/GEO with Schema.org structured data and 20+ blog posts',
       'Real-time WPM/accuracy tracking with performance analytics',
-      'OAuth + Supabase auth with cloud sync',
     ],
   },
 ]
@@ -40,14 +55,27 @@ const projects = [
 const experience = [
   {
     role: 'Founder & Applied AI Engineer',
+    company: 'StudyLock',
+    location: 'Atlanta, GA',
+    period: 'Mar 2026 – Present',
+    bullets: [
+      'Orchestrated multi-agent AI system with CrewAI (3 agents), AutoGen (inter-agent consensus), and LangGraph (condition-based state machine) via LangChain + Claude Haiku; dynamically adapts room atmosphere and capacity from live weather and time-of-day data, cost-optimized to ~50 API calls/day under $5/month',
+      'Built MCP server with Tool registration for agent data access (weather, time, room stats) and Notion API auto-documentation; implemented Playwright MCP enabling AI agents to verify live site health and canvas rendering via headless Chromium',
+      'Integrated Canvas 2D pixel-art engine (60fps, Y-coordinate Z-sorting, sprite sheet slicing) with custom MCP weather-driven window rendering (day/night, rain); Supabase Realtime WebSockets for live presence across 14 themed rooms with auto-expanding capacity',
+      'Architected FastAPI backend with GitHub Actions CI/CD (TypeScript check, Next.js build, 23 Playwright E2E tests) and Vercel auto-deploy',
+    ],
+  },
+  {
+    role: 'Founder & Applied AI Engineer',
     company: 'Glowmi',
     location: 'Atlanta, GA',
     period: 'Feb 2026 – Present',
     bullets: [
-      'Architected an AI skincare platform from scratch with agentic AI orchestrating 6 tools via Gemini Function Calling',
-      'Implemented RAG pipeline with pgvector for cosine similarity search across skincare knowledge base',
-      'Designed multimodal skin analysis using Gemini 2.5 Flash with offline fallback via MediaPipe (468-point face landmarks)',
-      'Deployed serverless infrastructure on AWS Lambda + S3 + CloudWatch with CI/CD via GitHub Actions',
+      'Implemented agentic AI with Gemini Function Calling; single agent orchestrates 6 tools (skin analysis, RAG product search, weather, routine, diary) for context-aware personalized responses with graceful fallback',
+      'Built RAG pipeline with Supabase pgvector and Gemini embeddings for cosine similarity search; SkinChat and ingredient analyzer (OCR + Gemini) grounded in curated product/ingredient database',
+      'Built multimodal AI skin analysis using Gemini 2.5 Flash, generating personalized skincare reports and seasonal color typing across 10 types from user selfies',
+      'Architected serverless infra with AWS Lambda (Gemini API proxy, multi-layer fallback), S3 (server-side encryption), and CloudWatch (logs, error alerting); implemented GitHub Actions CI/CD with ESLint, 28-point automated QA, custom pre-push hooks, and Cloudflare Pages auto-deploy',
+      'Integrated MediaPipe for fully in-browser face analysis (468-point landmark detection, WebGPU/CPU fallback) as offline-capable Gemini fallback, eliminating server dependency for core feature',
     ],
   },
   {
@@ -56,10 +84,10 @@ const experience = [
     location: 'Atlanta, GA',
     period: 'Feb 2026 – Present',
     bullets: [
-      'Launched a multilingual typing platform with AI-generated content across 4 languages (EN/KO/ZH/JP)',
-      'Integrated 3 LLM APIs (Claude, Gemini, OpenAI) for dynamic content generation and AI-driven Adventure Mode',
-      'Generated all visual assets using OpenAI DALL-E, eliminating external design dependencies',
-      'Shipped OAuth + Supabase auth with real-time performance analytics and cloud sync',
+      'Designed AI-driven Adventure Mode end-to-end (Claude + Gemini): game logic, debuff systems, boss phase mechanics, and all 10 world storylines via Claude API',
+      'Built multilingual support with 4-language content (EN/KO/ZH/JP) generated and maintained via Claude API across all game content and UI elements',
+      'Implemented SEO/GEO strategy with AI-assisted authoring of 20+ blog posts, Schema.org structured data for organic search, and GEO strategies for AI-indexed discoverability',
+      'Produced all visual assets (monsters, bosses, backgrounds) via Gemini AI image generation pipelines integrated into the content workflow',
     ],
   },
   {
@@ -68,10 +96,12 @@ const experience = [
     location: 'Roswell, GA',
     period: 'Jan 2022 – Dec 2025',
     bullets: [
-      'Led Oracle-to-PostgreSQL migration of PDMS (700+ users), merging two schemas across 200+ tables and ~200 batch jobs; delivered in 14 months against 18-month timeline with zero downtime',
-      'Migrated eKanban (1,000+ users) servers to Ubuntu across 2 factory environments; updated 374 batch jobs and managed integrations with 12 external systems',
-      'Modernized KDMS PDA app using React and TypeScript, migrating 300+ screens for 1,000+ plant floor users',
-      'Served as SME for PDMS; supported 7 GM Korea applications as part of a 4-person team',
+      'Led Oracle-to-PostgreSQL migration of PDMS (700+ users), merging two schemas across 200+ tables and ~200 batch jobs; refactored 269 PowerBuilder screens, delivering in 14 months against an 18-month timeline with zero downtime',
+      'Migrated eKanban (1,000+ users) servers to Ubuntu across 2 factory environments; updated 374 batch jobs, resolved Korean encoding issues, and managed integrations with 12 external systems via Connect Direct and Sterling',
+      'Served as SME for PDMS; supported 7 GM Korea applications as part of a 4-person team, collaborating daily with Korean Operations Managers and Business Owners across timezones',
+      'Modernized KDMS PDA app using React and TypeScript, migrating 300+ screens to modern UI and enabling real-time data sync for 1,000+ plant floor users',
+      'Migrated KSIS contract document system from legacy PDF generator to iframe-based solution; contributed to PostgreSQL migration, refactoring 40+ batch job queries using GitHub Copilot',
+      'Created automated scripts for annual AIME password rotation, reducing manual effort by 90%',
     ],
   },
   {
@@ -80,10 +110,10 @@ const experience = [
     location: 'Atlanta, GA (Client: AT&T)',
     period: 'Oct 2019 – Dec 2021',
     bullets: [
-      'Owned team-wide release process for AT&T deployments; led bi-weekly cross-team releases and emergency hotfix deployments',
-      "Maintained AT&T's P13N (Personalization) platform using React and REST APIs, improving ad delivery reliability across millions of users",
-      'Reduced incident resolution time through Splunk log analysis and root cause investigation',
-      'Managed Kubernetes deployments on Azure across dev, test, and prod environments',
+      'Owned team-wide release process for AT&T deployments; led bi-weekly cross-team releases and emergency same-day hotfix deployments, coordinating across US and India engineering teams',
+      "Maintained AT&T's P13N (Personalization) platform using React and REST APIs, improving ad delivery reliability across millions of users; wrote Cucumber.js BDD test coverage to reduce regression risk",
+      'Reduced incident resolution time by identifying production microservice failures through Splunk log analysis and root cause investigation',
+      'Managed Kubernetes deployments on Azure across dev, test, and prod environments; configured Jenkins pipelines to automate build and deployment workflows',
     ],
   },
 ]
@@ -91,19 +121,19 @@ const experience = [
 const skillCategories = [
   {
     category: 'AI / LLM',
-    skills: ['RAG', 'Agentic AI', 'Prompt Engineering', 'Function Calling', 'Structured Outputs', 'Vector Search', 'Embeddings', 'Anthropic API (Claude)', 'Google Gemini API', 'OpenAI API'],
+    skills: ['Multi-Agent Orchestration', 'RAG', 'MCP', 'CrewAI', 'AutoGen', 'LangChain', 'LangGraph', 'Function Calling', 'Prompt Engineering', 'Vector Search', 'Embeddings', 'Anthropic API (Claude)', 'Gemini API', 'OpenAI API'],
   },
   {
-    category: 'Frontend',
-    skills: ['React 18', 'TypeScript', 'JavaScript (ES6+)', 'Tailwind CSS', 'Vite'],
+    category: 'Frameworks & Languages',
+    skills: ['React', 'Next.js', 'FastAPI', 'TypeScript', 'Python', 'JavaScript (ES6+)', 'Node.js', 'Java', 'SQL', 'Tailwind CSS', 'Vite'],
   },
   {
-    category: 'Backend & DB',
-    skills: ['Node.js', 'PostgreSQL', 'Supabase', 'pgvector', 'SQL', 'Java'],
+    category: 'Databases & Platforms',
+    skills: ['PostgreSQL', 'Supabase', 'pgvector', 'AWS (Lambda, S3, CloudWatch)', 'Azure', 'MySQL', 'OracleSQL'],
   },
   {
-    category: 'Cloud & DevOps',
-    skills: ['AWS (Lambda, S3, CloudWatch)', 'GitHub Actions', 'CI/CD', 'Vercel', 'Cloudflare Pages', 'Azure', 'Linux'],
+    category: 'Build / Tools / Product',
+    skills: ['GitHub Actions', 'CI/CD', 'Playwright', 'SEO/GEO', 'TDD', 'Git', 'REST APIs', 'Vercel', 'Cloudflare Pages', 'Jenkins', 'Splunk', 'Linux', 'Agile/Scrum'],
   },
 ]
 
@@ -167,7 +197,7 @@ export default function Portfolio() {
               animate="visible"
               exit={{ opacity: 0, y: -10 }}
               variants={{ visible: { transition: { staggerChildren: 0.2 } } }}
-              className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-4xl mx-auto"
+              className="grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-6xl mx-auto"
             >
               {projects.map(project => (
                 <motion.div
